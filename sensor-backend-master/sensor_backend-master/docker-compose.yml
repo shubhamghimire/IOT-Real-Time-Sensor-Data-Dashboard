@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  dbs:
+    container_name: db
+    build:
+      context: postgresql/
+    volumes:
+      - pg_data:/var/lib/postgresql/data/pgdata
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "54326:5432"
+volumes:
+  pg_data:

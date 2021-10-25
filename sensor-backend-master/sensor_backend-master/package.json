@@ -1,0 +1,35 @@
+{
+  "name": "data-fetch-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint --fix src",
+    "db:create": "sequelize-cli db:create",
+    "migrate": "npx sequelize-cli db:migrate"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-validator": "^6.10.0",
+    "helmet": "^4.4.1",
+    "http-errors": "~1.6.3",
+    "json2csv": "^5.0.6",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.6.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.2",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}

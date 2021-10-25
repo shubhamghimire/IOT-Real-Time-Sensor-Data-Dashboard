@@ -1,0 +1,21 @@
+<html>
+<p id="p1"> MEMS </p>
+<p id="p2"> CPSR</p>
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js" integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy" crossorigin="anonymous"></script>
+<script>
+  const socket = io("http://localhost:3000");
+  // client-side
+socket.on('connect', function(){
+  socket.on("mems", (arg) => {
+      document.getElementById("p1").innerHTML = `MEMS current value is ${arg["id"]} and updated at ${arg["date_time"]}`;
+      console.log(arg); // world
+  });
+});
+socket.on('connect', function(){
+  socket.on("cpsr", (arg) => {
+      document.getElementById("p2").innerHTML = `CPSR current value is ${arg["id"]} and updated at ${arg["local_date"]}`;
+      console.log(arg); // world
+  });
+});
+</script>
+</html>

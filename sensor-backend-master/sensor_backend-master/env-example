@@ -1,0 +1,13 @@
+
+#Server Port
+PORT=3000
+
+# Database configuration 
+DB_USER=postgres
+DB_HOST=localhost
+DB_NAME=postgres
+DB_PASS=postgres
+DB_PORT=54326
+
+# Dataset checking frequency in second, default is 10s
+CHECK_FREQUENCY=10000
